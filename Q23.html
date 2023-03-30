@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>CARD</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .card{
+            position:relative;
+            width:30%;
+            border-style: solid;
+           
+            box-shadow:10px 20px 4px black;
+            background-color:rgb(114, 114, 245);
+           
+        }
+        .card>img{
+            width:100%;
+            height:40%;
+
+        }
+        .desc{
+            padding:20px;
+        }
+        .date{
+            width:30%;
+            color:rgb(225, 225, 238);
+            font-size:30px;
+            background-color:rgba(0,10,10.8);
+            position:absolute;
+            top:37%;
+            left:10%;
+            transform: rotate(-5deg);
+        }
+        .desc>h2{
+            font-weight: 400;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color:white;
+            text-shadow: teal;
+        }
+        .desc>p{
+            font-weight: 400;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color:white;
+            text-shadow: teal;
+        }
+    </style>
+</head>
+<body>
+    <div style="display:flex; justify-content:space-around;">
+    <script>
+    images=["2.jpeg","4.jpeg","5.jpeg"];
+    date=["23 dec","28 dec","29 dec"];
+    titles=["Workshop","Guest Lecture","Annual Function"];
+    desc=["welcome everyone ","welcome everyone","welcome everyone"];
+    
+    for( i=0;i<3;i++)
+   {
+       
+   
+    card='<div class="card">'
+        +'<img src="'+images[i]+'" >'
+        +'<div class="date">'+date[i]+'</div>'
+        +'<div class="desc">'
+           +' <h2>'+titles[i]+'</h2>'
+            +'<p>'+desc[i]+'</p>'
+        +'</div>'
+
+    +'</div>'
+    document.write(card);
+   }
+
+</script>
+</div>
+</body>
+</html>

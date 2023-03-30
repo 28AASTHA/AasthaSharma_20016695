@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>
+            COUNTER
+        </title>
+      
+    </head>
+    <style>
+         #i1{
+            background-color: rgb(233, 143, 41);
+            width:90px;
+            height:30px;
+            border-color: rgb(19, 17, 12);
+            box-shadow: 5px 4px 6px white;
+
+            padding:30px;
+            margin:left;
+            border-style:solid;
+            text-align:center;
+            color:darkgreen;
+        }
+
+        #i2{
+            background-color:rgb(11, 129, 197);
+            width:100%;
+            height:100%;
+        }
+    </style>
+    <body>
+        <div  id="i2">
+        <div  id="i1"></div>
+        <button onclick="x=setInterval(start,1000)">start</button>
+        <button onclick="clearInterval(x)">stop</button>
+       <script type="text/javascript">
+        count=0;
+        function start()
+        {
+            block=document.getElementById('i1')
+            block.innerHTML=count;
+            count++;
+        }
+
+
+
+</script>
+
+</div>
+        </body>
+        </html>

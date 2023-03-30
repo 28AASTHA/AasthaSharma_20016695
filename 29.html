@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            height: 1000px;
+            width: 1000px;
+            /* background-color: pink; */
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p id='text'>Text-Growing</p>
+    <script type="text/javascript">
+        size = 10;
+        block = document.getElementById('text');
+        var1=setInterval(increase, 100);
+        function increase() {
+            // block.style.fontSize = size++;
+            block.innerHTML="Text-Growing";
+            block.setAttribute('style', "font-size: " + size + "px; color: red");
+            size++;
+            if (size == 50)
+            {
+                clearInterval(var1);
+                var2=setInterval(decrease, 100);
+            }
+                
+        }
+        function decrease() {
+            // block.style.fontSize = size--;
+            block.innerHTML="Text-Shrinking";
+            block.setAttribute('style', "font-size: " + size + "px; color: green");
+            size--;
+            if (size == 5)
+            {
+                clearInterval(var2);
+                var1=setInterval(increase, 100);
+            }
+                
+        }
+
+    </script>
+
+
+</body>
+
+</html>

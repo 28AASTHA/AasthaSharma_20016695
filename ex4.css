@@ -1,0 +1,43 @@
+p{
+     border:solid rgb(14,13,13) 2px;
+    height:200px;
+    width:200px;
+    background-color:green;
+    color: white;
+    font-size: 50px;
+    padding-left: 25px;
+    display:flex;  
+    align-items:center;
+    animation-name: animate;   /*animateOne is property whic is used to animate an image*/
+    animation-duration: 10s;
+    animation-iteration-count: infinite; 
+    animation-direction:alternate ;  /*0-360 deg then 360-0..aise alternate hoti rhegi image*/
+    position: relative;
+}
+
+@keyframes animate {                
+    from{   
+            transform: matrix(100%);   /*mtlb image 0 degree se --360 degree tk rotate hogi(from----to)*/
+            background-color:indianred;
+            left:0px;
+            bottom: 0px;
+    }
+    25%{
+
+        left:600px;
+        bottom:0px;
+    }
+    50%{
+        left:600px;
+        bottom: -600px;
+
+    }
+    75%{
+        left:0px;
+        bottom:-600px;
+    }
+    to{
+        left:0px;
+        bottom:0px;
+    }
+}

@@ -1,0 +1,27 @@
+/* Make a layout template that contains a header and two paragraphs. Use float to line up the 
+two paragraphs as columns side by side. Give the header and two paragraphs a border 
+and/or a background color so you can see where they are */
+* {
+    box-sizing: border-box;
+    border-color: black;
+} 
+
+.header{
+    text-align: center;
+    color :black;
+    padding: 20px;
+    font-size: 35px;
+    width:100%;
+    border:5px solid black;
+}
+
+
+.column{
+    text-align: center;
+    padding:15px;
+    background-color :black;
+    float: left;
+    width:50%;
+    height:300px;
+    border:5px solid black;
+}

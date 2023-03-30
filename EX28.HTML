@@ -1,0 +1,32 @@
+<html>
+    <head><title>CLOCK</title>
+        
+    </head>
+    <style>
+        #clock{
+            background-color: yellow;
+            width:70px;
+            height:30px;
+        }
+    </style>
+    <body>
+       <button onclick="genText()">Click It</button>
+       <script type="text/javascript">
+        function genText(){
+
+        
+        name=prompt("WHAT IS YOUR NAME")
+      
+       d=new Date()
+       hr=d.getHours();
+       if(hr<12)
+
+       greet="Good Morning"
+        else if(hr<16)
+        greet="Good Afternoon"
+           elsegreet="Good Evening"
+
+           document.write(greet+":"+name)
+        }
+        </script>
+        </body></html>

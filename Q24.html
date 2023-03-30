@@ -1,0 +1,46 @@
+<html>
+<head>
+    <title> Conversion </title>
+</head>
+<body>
+    <form method="get">
+        <input type=number name='input'>
+        <select >
+        <option value ='c'> Celsius </option>
+        <option value ='f'> Fahrenheit </option>
+        <option value ='K'> Kelvin </option>
+        </select>
+        <input type=text name='output'>
+        <select >
+        <option value ='c'> Celsius </option>
+        <option value ='f'> Fahrenheit </option>
+        <option value ='K'> Kelvin </option>
+        </select>
+    </form>
+    <br><button onclick="Convert()">Convert</button></br>
+    <script>
+        function Convert()
+        {
+            input=parseFloat(document.forms[0].elements[0].value);
+            inp=document.forms[0].elements[1].value;
+            out=document.forms[0].elements[3].value;
+            if(inp=='c'&&out=='K')
+            {
+                Result = input+273;
+            }
+            else if(inp=='c'&&out=='f')
+            {
+                Result = (input*((9/5)+32));
+            }
+            else if(inp=='f'&&out=='K')
+            {
+                Result=(input-32*(5/9))+273;
+            }
+            else{
+                Result = input;
+            }
+            document.forms[0].elements[2].value=Result;
+        }
+    </script>
+</body>
+</html>
